@@ -9,7 +9,7 @@ export default function Navbar() {
       <nav>
         <NavLink to="/categoria/graficas">graficas</NavLink>
         <NavLink to="/categoria/MotherBoard">MotherBoard</NavLink>
-        <NavLink to="/categoria/RAM">RAM</NavLink>
+        <NavLink to="/categoria/ram">RAM</NavLink>
       </nav>
     </header>
   );

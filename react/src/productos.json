@@ -3,15 +3,15 @@
       "id": 1,
       "name": "grafica gigabyte",
       "description": "Placa de video Gigabyte",
-      "stock": 50,
-      "price": 12,
+      "stock": 500,
+      "price": 15,
       "categoria": "graficas"
     },
     {
       "id": 2,
       "name": "grafica Nvidia",
       "description": "placa de video Nvidia",
-      "stock": 20,
+      "stock": 250,
       "price": 12,
       "categoria": "graficas"
     },
@@ -19,32 +19,32 @@
       "id": 3,
       "name": "MotherBoard Gigabyte",
       "description": "MotherBoard Gigabyte",
-      "stock": 25,
+      "stock": 115,
       "price": 35,
-      "categoria": "MotherBoard"
+      "categoria": "motherBoard"
     },
     {
       "id": 4,
       "name": "MotherBoard Nvidia",
       "description": "MotherBoard Nvidia",
-      "stock": 25,
+      "stock": 125,
       "price": 35,
-      "categoria": "MotherBoard"
+      "categoria": "motherBoard"
     },
     {
       "id": 5,
       "name": "RAM 8GB ",
       "description": "Memoria Ram de 8gb",
-      "stock": 30,
+      "stock": 13,
       "price": 30,
-      "categoria": "RAM"
+      "categoria": "ram"
     },
     {
       "id": 6,
       "name": "RAM 16GB",
       "description": "Memoria Ram de 16gb",
-      "stock": 30,
+      "stock": 17,
       "price": 60,
-      "categoria": "RAM"
+      "categoria": "ram"
     }
   ]
