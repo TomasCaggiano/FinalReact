@@ -42,7 +42,7 @@ function ItemDetailContainer() {
   return (
       <div>
           {loading ? (
-              <Spinner animation="grow" />
+              <h1>loading...</h1>
           ) : componente ? (
               <ItemDetail componente={componente} cantidadAgregada={cantidadAgregada} handleOnAdd={handleOnAdd} />
           ) : (
