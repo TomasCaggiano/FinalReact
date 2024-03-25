@@ -1,12 +1,12 @@
+Compunentes
 
-#Compunentes
-##Mi ecommerce de Componentes para pc
-###Bienvenido/a a Compunentes
+Mi ecommerce de Componentes para pc
+Bienvenido/a a Compunentes
 
-##Descripción del proyecto
+Descripción del proyecto
 en esta plataforma en línea pueden encontrar y comprar componentes tanto para pc gamer como para pc de uso laboral
 
-##Características principales
+Características principales
 Cuenta con RAM, graficas y procesadores
 Posee una navegabilidad fluida, en la que los usuarios pueden filtrar los componentes, 
 ¿Cómo instalar el proyecto?
