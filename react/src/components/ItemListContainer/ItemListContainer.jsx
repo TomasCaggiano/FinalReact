@@ -19,7 +19,7 @@ function ItemListContainer() {
       let q = productosCollection;
 
       if (category) {
-        q = query(productosCollection, where('category', '==', category));
+        q = query(productosCollection, where('category', '==', Category));
       }
 
       const querySnapshot = await getDocs(q);
@@ -28,7 +28,7 @@ function ItemListContainer() {
     }
     
     fetchData();
-  }, [category]);
+  }, [Category]);
 
   return (
     <main>
