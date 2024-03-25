@@ -9,7 +9,7 @@ function ItemListContainer() {
 
   const [componentes, setComponentes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const {condition, Category } = useParams();
+  const {Category } = useParams();
 
   useEffect(() => {
     async function fetchData() {
@@ -28,7 +28,7 @@ function ItemListContainer() {
     }
     
     fetchData();
-  }, [condition, category]);
+  }, [category]);
 
   return (
     <main>
@@ -39,7 +39,7 @@ function ItemListContainer() {
       ) : (
         <section className="componentes-container">  
 
-          {libros.map(item => (
+          {componentes.map(item => (
             <Link key={item.id} to={`/item/${item.id}`}>   
 
               <div className="card">
