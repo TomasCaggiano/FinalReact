@@ -1,0 +1,16 @@
+.productoComprar{
+    border: 6px solid #000000;
+    border-radius: 15px;
+    margin: 45px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+#gif{
+    size: 13rem !important
+}
+
+.verde{
+    color:green ;
+}
+

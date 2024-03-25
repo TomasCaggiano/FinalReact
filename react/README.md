@@ -1,8 +1,17 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Compunentes
+##Mi ecommerce de Componentes para pc
+###Bienvenido/a a Compunentes
 
-Currently, two official plugins are available:
+##Descripción del proyecto
+en esta plataforma en línea pueden encontrar y comprar componentes tanto para pc gamer como para pc de uso laboral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Características principales
+Cuenta con RAM, graficas y procesadores
+Posee una navegabilidad fluida, en la que los usuarios pueden filtrar los componentes, 
+¿Cómo instalar el proyecto?
+Debes clonar el repositorio.
+en la consola:
+npm clone https://github.com/TomasCaggiano/React
+Npm install
+npm run dev 

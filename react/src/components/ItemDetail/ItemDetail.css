@@ -1,0 +1,47 @@
+.detail{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .card-text{
+    font-size: 32px;
+    }
+    
+    .imgDetail {
+        padding: 1re,;
+        height: 15rem;
+        width: auto;
+        border: 6px solid grey;
+        border-radius: 44px;
+    }
+    
+    .cardDetail{
+        text-align: left;
+        border: 6px solid grey;
+        border-radius: 35px;
+    }
+    
+    .titulo{
+        font-size: 3rem;
+        text-align: center;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 5px;
+        padding-left: 1rem;
+    }
+    
+    .terminarCompra{
+        background-color: red;
+        color: white;
+        border: solid red;
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+    }

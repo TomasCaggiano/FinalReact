@@ -1,50 +1,55 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import ItemDetail from '../ItemDetail/ItemDetail'; 
+import { CartContext } from '../CartContext/CartContext'; 
+import { getFirestore, doc, getDoc } from 'firebase/firestore'; 
 
-import productosJson from "../productos.json";
 
-function asyncMock(ItemId) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if(ItemId === undefined) {
-        resolve(productosJson);
-      }else {
-        const itemFiltrado = productosJson.filter((item) => {
-          return item.name === ItemId
-        })
+function ItemDetailContainer() {
+  const { id } = useParams();
+  const [componente, setComponentes] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const { addItem } = useContext(CartContext);
+  const [cantidadAgregada, setCantidadAgregada] = useState(0);
 
-        resolve(itemFiltrado)
-      }
-
-    }, 2000);
-  });
-}
-
-export default function ItemListContainer() {
-  const { ItemId } = useParams();
-  const [productos, setProductos] = useState([]);
+  const handleOnAdd = (cantidad) => {
+      setCantidadAgregada(cantidad);
+      addItem({ id: componente.id, title: componente.title, price: componente.price }, cantidad);
+  };
 
   useEffect(() => {
-    asyncMock(ItemId).then((res) => setProductos(res));
-  }, [ItemId]);
+      const fetchcomponente = async () => {
+          const db = getFirestore();
+          const componenteRef = doc(db, 'productos', id); 
 
+          try {
+              const componenteSnap = await getDoc(componenteRef);
+              if (componenteSnap.exists()) {
+                  setComponentes({ id: componenteSnap.id, ...componenteSnap.data() });
+              } else {
+                  console.log('No se encontró el componente');
+              }
+          } catch (error) {
+              console.error('Error al obtener el componente:', error);
+          } finally {
+              setLoading(false);
+          }
+      };
+
+      fetchcomponente();
+  }, [id]);
 
   return (
-    <main>
-      <section className="item-list-container">
-        {productos.map((item) => (
-          <section><h1 style={{ textTransform: "capitalize" }}>
-          {producto.name}
-        </h1>
-        <section className="Componente-info" style={{ display: "flex", width:"30px", height:"30px" }}>
-          <p>Description: {producto.description}</p>
-          <p>Stock: {producto.stock}</p>
-          <p>Price: {producto.price}</p>
-          <p>Category: {producto.category}</p>
-           </section>
-        </section>
-        ))}
-      </section>
-    </main>
+      <div>
+          {loading ? (
+              <Spinner animation="grow" />
+          ) : componente ? (
+              <ItemDetail componente={componente} cantidadAgregada={cantidadAgregada} handleOnAdd={handleOnAdd} />
+          ) : (
+              <p>No se encontró el componente</p>
+          )}
+      </div>
   );
 }
+
+export default ItemDetailContainer;

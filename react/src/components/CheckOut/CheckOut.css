@@ -1,0 +1,26 @@
+.Formulario{
+    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    margin: 1rem;
+    background-color: #00000099;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.botonComprar{
+    margin: 2rem;
+font-size: 25px;
+margin-bottom: 2rem;
+}
+
+.mar{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 25px;
+
+}

@@ -1,0 +1,9 @@
+.card {
+    background-color: beige;
+    border-radius: 1rem;
+  }
+  .componentes-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+  }
